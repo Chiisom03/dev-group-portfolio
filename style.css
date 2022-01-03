@@ -1,0 +1,403 @@
+@font-face {
+  font-family: "DM seriff";
+  src: url("Valky.otf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM seriff";
+  color: #fff;
+  /* color: #000 !important; */
+}
+
+body {
+  background-color: #24252a;
+  /* background-color: #3af; */
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+::selection {
+  background-color: #242222;
+  color: aliceblue;
+}
+
+header,
+.project {
+  height: 100vh;
+}
+
+.bgcolor {
+  background-color: #fff;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bgcolor *,
+.bgcolor main header .header .brand,
+.bgcolor main header .header .toggler,
+.bgcolor main header .header nav .nav__links li a,
+.bgcolor main header .header .hero__caption h2 {
+  color: #24252a;
+}
+
+.header {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.brand {
+  cursor: pointer;
+  color: aliceblue;
+  position: fixed;
+  top: 2rem;
+  left: 4rem;
+  font-size: 1.25rem;
+  text-shadow: -1px 1px 10px #fff;
+  z-index: 2;
+}
+
+.toggler {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  left: -17rem;
+  bottom: 15rem;
+  transform: rotate(-90deg);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li a {
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav__links li:hover a {
+  color: #8b208f;
+}
+
+.hero__caption h2 {
+  font-size: 9rem;
+  margin: 5rem auto;
+  color: rgb(225, 235, 243);
+  text-align: center;
+  line-height: 1.235em;
+}
+
+.section {
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about__video {
+  height: 100px;
+  width: 100%;
+}
+
+.about .section__content video {
+  width: 100%;
+  object-fit: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid {
+  margin: 3rem;
+}
+
+.grid,
+.section .section__content {
+  margin-top: 2rem;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  position: relative;
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  width: 72px;
+  height: 2px;
+  background-color: #000;
+  margin-left: 0.25rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card:hover .card__desc {
+  bottom: 0;
+  transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+}
+
+.card__img img {
+  object-fit: cover;
+}
+
+.card__desc {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding: 1rem;
+}
+
+.card__name {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* CONTACT */
+.contact {
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  font-size: 1.35rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #24252a;
+  outline: none;
+  padding: 1rem;
+  background: transparent;
+  font-size: 20px;
+  color: #24252a;
+}
+
+.input__field {
+  margin-bottom: 50px;
+}
+
+.btns button:hover {
+  background-color: #fff;
+  color: #24252a;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form__btn {
+  padding: 0.5rem 3rem;
+  border: 2px solid #24252a;
+  right: 20px;
+  background: transparent;
+  color: #24252a;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btns button {
+  background-color: #24252a;
+  color: aliceblue;
+}
+
+/* FOOTER */
+
+footer {
+  height: 100vh;
+  /* background-color: red; */
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.footer h2 {
+  margin-top: 50px;
+  font-size: 3rem;
+}
+.footer .nav__links li {
+  margin: 30px;
+}
+.footer .nav__links li a {
+  font-size: 2rem;
+}
+
+/* QUERIES FOR ALL SCREEN SIZES */
+@media screen and (max-width: 768px) {
+  .toggler {
+    position: fixed;
+    display: inline-block;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.25rem;
+    color: aliceblue;
+    text-shadow: -1px 1px 10px #fff;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* @keyframes scaleMenu {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(100%);
+    }
+  } */
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    transform: rotate(0);
+    background-color: #000;
+    display: grid;
+    place-items: center;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+  }
+
+  .nav__links {
+    flex-direction: column;
+  }
+
+  .nav__links li a {
+    padding: 0 2rem;
+    font-size: 3rem;
+  }
+
+  .show {
+    left: 0;
+  }
+
+  .hero__caption h2 {
+    font-size: 6rem;
+    margin: 3rem auto;
+    text-align: center;
+    margin-top: 10rem;
+    padding: 0 3rem;
+  }
+
+  .section {
+    padding: 0 1rem;
+  }
+
+  .grid,
+  .section .section__content {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .brand {
+    font-size: 1rem;
+    top: 1.25rem;
+    left: 1rem;
+  }
+
+  .toggler {
+    top: 1.25rem;
+    right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: aliceblue;
+    text-shadow: -1px 1px 10px #fff;
+    z-index: 2;
+  }
+
+  .nav__links li a {
+    padding: 0 2rem;
+    font-size: 3rem;
+  }
+
+  .hero__caption h2 {
+    font-size: 4rem;
+    margin: 3rem auto;
+    text-align: center;
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (width: 425px) {
+  .hero__caption h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (width: 1024px) {
+  .hero__caption h2 {
+    font-size: 7rem;
+    padding: 0 4rem;
+  }
+
+  nav {
+    position: absolute;
+    left: -10rem;
+    bottom: 9rem;
+    transform: rotate(-90deg);
+  }
+
+  .nav__links li a {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .section {
+    padding: 0 2rem;
+  }
+}
